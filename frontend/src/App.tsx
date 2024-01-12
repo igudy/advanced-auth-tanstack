@@ -23,7 +23,6 @@ import AllProducts from "./pages/admin/AllProducts.jsx";
 import AddProduct from "./pages/admin/AddProduct.jsx";
 import Orders from "./pages/admin/Orders.jsx";
 import UpdateProduct from "./pages/admin/UpdateProduct.jsx";
-import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
 
 axios.defaults.withCredentials = true;
 
