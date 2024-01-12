@@ -15,7 +15,15 @@ import {
 } from "./components/redux/slices/auth/authSlice.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import axios from "axios";
+import Admin from "./pages/admin/Admin.jsx";
+import Dashboard from "./pages/admin/Dashboard.jsx";
+import AllProducts from "./pages/admin/AllProducts.jsx";
+import AddProduct from "./pages/admin/AddProduct.jsx";
+import Orders from "./pages/admin/Orders.jsx";
+import UpdateProduct from "./pages/admin/UpdateProduct.jsx";
+import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
 
 axios.defaults.withCredentials = true;
 
@@ -47,6 +55,19 @@ const App = () => {
         <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
         <Route path="/enter-access-code/:email" element={<EnterAccessCode />} />
         <Route path="/verify/:verificationToken" element={<Verify />} />
+
+        {/* Admin section */}
+        <Route path="/admin/*" element={<Admin />}>
+          {/* Nested admin routes */}
+          <Route index element={<Dashboard />} />
+          <Route path="all-products" element={<AllProducts />} />
+          <Route
+            path="all-products/update-product/:id"
+            element={<UpdateProduct />}
+          />
+          <Route path="add-product" element={<AddProduct />} />
+          <Route path="orders" element={<Orders />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
