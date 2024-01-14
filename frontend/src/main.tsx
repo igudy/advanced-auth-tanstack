@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
+
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(

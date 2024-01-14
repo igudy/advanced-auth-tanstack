@@ -15,7 +15,7 @@ import {
 } from "./components/redux/slices/auth/authSlice.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import "./index.css";
 import axios from "axios";
 import Admin from "./pages/admin/Admin.jsx";
 import Dashboard from "./pages/admin/Dashboard.jsx";

@@ -91,7 +91,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                     </p>{" "}
                     {/* Cart Section */}
                     <div className="mt-8">
-                      {cartItems?.length === 0 ? (
+                      {/* {cartItems?.length === 0 ? (
                         <CartEmpty />
                       ) : (
                         <div>
@@ -123,7 +123,7 @@ const CartModal = ({ openModal, closeModal, isOpen }) => {
                             </div>
                           </div>
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </Dialog.Panel>
