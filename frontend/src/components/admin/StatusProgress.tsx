@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCheck, FaExclamation } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 

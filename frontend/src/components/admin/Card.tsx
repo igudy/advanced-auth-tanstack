@@ -1,6 +1,12 @@
 import React from "react";
 
-const Card = ({ top, icon: Icon, amount }) => {
+interface CardProps {
+  top: string;
+  icon: any;
+  amount: number;
+}
+
+const Card = ({ top, icon: Icon, amount }: CardProps) => {
   return (
     <div>
       <div className="mt-4 text-sm flex bg-white rounded-3xl pl-2 pr-10 py-3 shadow-purple-200 shadow-md items-center">
@@ -18,7 +24,10 @@ const Card = ({ top, icon: Icon, amount }) => {
 
 export default Card;
 
-export const CardGraph = ({ children }) => {
+interface CardGraphProps {
+  children: React.ReactNode;
+}
+export const CardGraph = ({ children }: CardGraphProps) => {
   return (
     <div className="my-6 rounded-xl w-full bg-white shadow-xl">{children}</div>
   );
