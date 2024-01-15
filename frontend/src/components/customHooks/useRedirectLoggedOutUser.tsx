@@ -3,15 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { authService } from "../redux/slices/auth/authService";
 import toast from "react-hot-toast";
 
-const useRedirectLoggedOutUser = (path) => {
+interface useRedirectLoggedOutUserProps {
+  path: string;
+}
+
+const useRedirectLoggedOutUser = ({ path }: useRedirectLoggedOutUserProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let isLoggedIn;
+    let isLoggedIn: boolean;
     const redirectLoggedOutUser = async () => {
       try {
         isLoggedIn = await authService.loginStatus();
-      } catch (error) {
+      } catch (error: any) {
         console.log(error.message);
       }
 

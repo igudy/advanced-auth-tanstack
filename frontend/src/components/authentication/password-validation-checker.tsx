@@ -1,8 +1,15 @@
-import React from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { BsCircleFill, BsCircle } from "react-icons/bs";
+import { BsCircle } from "react-icons/bs";
 
-function PasswordValidationChecker({ title, checked }) {
+interface PasswordValidationChecker {
+  title: string;
+  checked: string;
+}
+
+function PasswordValidationChecker({
+  title,
+  checked,
+}: PasswordValidationChecker) {
   return (
     <div className="flex gap-3 items-center">
       {checked ? (

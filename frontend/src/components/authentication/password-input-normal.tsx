@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import {
-  AiFillEye,
-  AiFillEyeInvisible,
-  AiOutlineEye,
-  AiOutlineEyeInvisible,
-} from "react-icons/ai";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+
+interface PasswordInputNormalProps {
+  placeholder: string;
+  name: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onPaste: (event: React.ClipboardEvent<HTMLInputElement>) => void;
+}
 
 const PasswordInputNormal = ({
   placeholder,
+  name,
   value,
   onChange,
-  name,
   onPaste,
-}) => {
-  const [showPassword, setShowPassword] = useState(false);
+}: PasswordInputNormalProps) => {
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

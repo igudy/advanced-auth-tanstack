@@ -1,4 +1,3 @@
-import React from "react";
 import { Approved, Disable, Error } from "./StatusProgress";
 import { Progress } from "../ui/progress";
 

@@ -1,7 +1,24 @@
 import { useState } from "react";
+import { UseFormRegister } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
-const PasswordInput = ({ placeholder, id, name, register, onPaste, value }) => {
+interface PasswordInputProps {
+  placeholder: string;
+  id: string;
+  name: string;
+  onPaste: (event: React.ClipboardEvent<HTMLInputElement>) => void;
+  value: number;
+  register: UseFormRegister<any>;
+}
+
+const PasswordInput = ({
+  placeholder,
+  id,
+  name,
+  register,
+  onPaste,
+  value,
+}: PasswordInputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -20,7 +37,7 @@ const PasswordInput = ({ placeholder, id, name, register, onPaste, value }) => {
         onPaste={onPaste}
         value={value}
       />
-      <spanp
+      <span
         onClick={togglePasswordVisibility}
         className="cursor-pointer mx-[-40px]"
       >
@@ -29,7 +46,7 @@ const PasswordInput = ({ placeholder, id, name, register, onPaste, value }) => {
         ) : (
           <AiFillEye className="text-gray-800 w-7 h-7" />
         )}
-      </spanp>
+      </span>
     </div>
   );
 };

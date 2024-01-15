@@ -1,4 +1,3 @@
-import React from "react";
 import { footerAPI } from "../../data/data";
 import SocialIcons from "../reusable/SocialIcons";
 

@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
 import { CardGraph } from "./Card";
+import { ApexOptions } from "apexcharts";
+
+interface SeriesData {
+  name: string;
+  data: number[];
+}
+
+interface ChartState {
+  series: SeriesData[];
+  options: ApexOptions;
+}
 
 const SecondRow = () => {
-  const [chartState, setChartState] = useState({
+  const initialChartState: ChartState = {
     series: [
       {
         name: "High - 2013",
@@ -72,7 +83,9 @@ const SecondRow = () => {
         offsetX: -5,
       },
     },
-  });
+  };
+
+  const [chartState, setChartState] = useState<ChartState>(initialChartState);
 
   return (
     <div className="flex gap-5 justify-between p-2">
