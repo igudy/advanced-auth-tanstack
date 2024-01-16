@@ -10,5 +10,5 @@
       "@/lib/*": ["src/lib/*"]
     }
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.js"]
 }

@@ -2,24 +2,6 @@ import React from "react";
 import { heroapi } from "../../data/data";
 import HomeNavbar from "../navbar/HomeNavbar";
 
-// interface HeroApiVideo {
-//   imgsrc: string;
-//   name: string;
-// }
-
-// interface HeroSocialLinks {
-//   icon: string;
-// }
-
-// interface HeroApi {
-//   title: string;
-//   subtitle: string;
-//   videos?: HeroApiVideo[];
-//   btnText: string;
-//   sociallinks?: HeroSocialLinks[];
-//   img: string;
-// }
-
 const Hero: React.FC = () => {
   return (
     <>
