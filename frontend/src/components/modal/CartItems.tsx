@@ -9,12 +9,24 @@ import {
   setRemoveItemFromCart,
 } from "../redux/slices/cart/CartSlice";
 import { useEffect } from "react";
+import { Rootstate } from "../redux/store";
 
-const CartItems = ({
-  item: { id, title, text, img, color, shadow, price, cartQuantity },
-}) => {
-  const totalQuantity = useSelector(selectTotalQuantity);
-  const cartItems = useSelector(selectCartItems);
+interface CartItemsProps {
+  item: {
+    id: string;
+    title: string;
+    text: string;
+    img: string;
+    color: string;
+    shadow: string;
+    price: number;
+    cartQuantity: number;
+  };
+}
+
+const CartItems = ({ item }: CartItemsProps) => {
+  const { id, title, text, img, color, shadow, price, cartQuantity } = item;
+  const cartItems = useSelector((state: RootState) => selectCartItems(state));
   const dispatch = useDispatch();
 
   useEffect(() => {

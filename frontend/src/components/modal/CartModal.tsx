@@ -3,8 +3,6 @@ import { Fragment, useEffect } from "react";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { FiDelete } from "react-icons/fi";
-import CartEmpty from "./CartEmpty";
-import CartItems from "./CartIems";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectCartItems,

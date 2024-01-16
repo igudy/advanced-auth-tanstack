@@ -37,9 +37,9 @@ const heroapi = {
   img: sneakershoe,
   btntext: "Explore Product",
   videos: [
-    { imgsrc: vcover1, clip: clip },
-    { imgsrc: vcover2, clip: clip },
-    { imgsrc: vcover3, clip: clip },
+    { imgsrc: vcover1, clip: clip, name: "first_video" },
+    { imgsrc: vcover2, clip: clip, name: "second_video" },
+    { imgsrc: vcover3, clip: clip, name: "third_video" },
   ],
   sociallinks: [
     { icon: facebook },

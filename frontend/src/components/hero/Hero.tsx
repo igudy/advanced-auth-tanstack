@@ -1,9 +1,26 @@
 import React from "react";
-
 import { heroapi } from "../../data/data";
 import HomeNavbar from "../navbar/HomeNavbar";
 
-const Hero = () => {
+// interface HeroApiVideo {
+//   imgsrc: string;
+//   name: string;
+// }
+
+// interface HeroSocialLinks {
+//   icon: string;
+// }
+
+// interface HeroApi {
+//   title: string;
+//   subtitle: string;
+//   videos?: HeroApiVideo[];
+//   btnText: string;
+//   sociallinks?: HeroSocialLinks[];
+//   img: string;
+// }
+
+const Hero: React.FC = () => {
   return (
     <>
       <div className="relative bg-theme clip-path xsm:h-[63vh] sm:h-[65vh] lg:h-[70vh] h-[70vh]">
@@ -17,12 +34,12 @@ const Hero = () => {
       </div>
       <div className="flex justify-between mx-10 xsm:mx-2 sm:mx-5 md:mx-5 sm:mt-[-300px] xsm:mt-[-300px] mt-[-250px]">
         <div className="left-0 cursor-pointer z-10">
-          {heroapi.videos?.map((item, i) => (
+          {heroapi?.videos?.map((item, i) => (
             <div className="my-3" key={i}>
               <img
                 className="w-20 h-20 xsm:w-12 xsm:h-12 rounded-lg shadow-xl hover:z-0 hover:border-2 z-20"
                 src={item.imgsrc}
-                alt={item.icon}
+                alt={item.name}
               />
               {/* <video
                 autoPlay={true}

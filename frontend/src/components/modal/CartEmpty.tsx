@@ -1,4 +1,3 @@
-import React from "react";
 import ShoppingBag from "../../assets/emptybag.png";
 
 const CartEmpty = () => {

@@ -1,8 +1,21 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { authService } from "./authService";
 import toast from "react-hot-toast";
+import { UserData, UserResponse, authService } from "./authService";
 
-const initialState = {
+interface AuthState {
+  isLoggedIn: boolean;
+  user: UserResponse | null;
+  users: UserResponse[];
+  twoFactor: boolean;
+  isError: boolean;
+  isSuccess: boolean;
+  isLoading: boolean;
+  message: string;
+  verifiedUsers: number;
+  suspendedUsers: number;
+}
+
+const initialState: AuthState = {
   isLoggedIn: false,
   user: null,
   users: [],
@@ -18,7 +31,7 @@ const initialState = {
 // Register User
 export const registerUser = createAsyncThunk(
   "auth/register",
-  async (userData, thunkAPI) => {
+  async (userData: UserData, thunkAPI) => {
     try {
       return await authService.register(userData);
     } catch (error) {
